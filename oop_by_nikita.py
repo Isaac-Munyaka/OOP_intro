@@ -55,16 +55,47 @@ tommy.eat()
 nala.bite()
 simba.sleep()
 
-# Rewriting the above code to more easier OOP
+
+class Admission:
+    def __init__(self, name, email, id, address, gender):
+        self.name = name
+        self.email = email
+        self.id= id
+        self.address = address
+        self.gender= gender
+    
+    def onboard(self):
+        print(f"Congratulations {self.name} of id {self.id}, for being admitted to Flatiron School")
+
+
+class Finance(Admission):
+    def __init__(self, name, email, id, fee, amount,balance):
+        super().__init__(name, email, id,) #Inheriting methods from the super class
+        self.fee = fee
+        self.amount = amount
+        self.balance = balance
+
+
+    def balance(self, amount):
+        print(f"{self.name}: your balnce is Ksh{self.amount}")
+
+
+
+class Cat:
+
+    def __init__(self, meow="meow"): #another way of defining the attributes
+        self.meow = meow
+
+
+    
+    
+fifi = Cat()
+fifi.meow
 
 class Dog:
-    pass
 
-    def __init__(self, eat, sleep, bark, bite):
-        self.eat= eat
-        self.sleep= sleep
-        self.bark= bark
-        self.bite=bite
+    def __init__(self, bark = "woof"):
+         self.bark = bark
 
-dog1=Dog()
-  
+garry= (Dog)
+garry.bark
